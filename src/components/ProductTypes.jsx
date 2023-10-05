@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const ProductTypes = React.memo((props) => {
   const [sliderIndex, setSliderIndex] = useState(0);
-  const [slider, setSlider] = useState(0)
+  const [slider, setSlider] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -23,23 +23,27 @@ const ProductTypes = React.memo((props) => {
 
   useEffect(() => {
     if (windowWidth >= 380 && windowWidth <= 410) {
-      setSlider(60)
-      console.log('true')
-    } 
+      setSlider(60);
+      console.log('true');
+    }
 
     if (windowWidth >= 410) {
-      setSlider(55)
-      console.log('55')
+      setSlider(55);
+      console.log('55');
     }
-  }, [windowWidth])
+
+    if(windowWidth < 864 && windowWidth > 764) {
+      setSlider(25)
+    }
+
+    if (windowWidth > 1280) {
+      setSlider(15)
+      console.log('15')
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
-    let lastIndex;
-    if (windowWidth <= 761) {
-      lastIndex = 2;
-    } else {
-      lastIndex = bestDeals.length - 1;
-    }
+    let lastIndex = 2
     if (sliderIndex < 0) {
       setSliderIndex(lastIndex);
     }
@@ -48,7 +52,8 @@ const ProductTypes = React.memo((props) => {
     }
   }, [sliderIndex, windowWidth]);
 
-  console.log(windowWidth)
+  console.log(windowWidth);
+  console.log(slider)
 
   const handleSlide = (d) => {
     if (d === 'left') {

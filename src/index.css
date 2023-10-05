@@ -81,7 +81,8 @@ nav {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
   margin: auto;
   cursor: pointer;
   z-index: 2;
@@ -216,6 +217,7 @@ nav {
 
 .bestDealsItem .img-inner {
   position: relative;
+  width: 100%;
 }
 
 .img-inner .product-image {
@@ -228,6 +230,7 @@ nav {
   position: absolute;
   top: 0px;
   left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   color: white;
   background-color: #ec2626;
@@ -400,7 +403,8 @@ footer {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
   margin: auto;
   cursor: pointer;
   z-index: 2;
@@ -753,7 +757,6 @@ footer {
 }
 
 
-
 @media only screen and (max-width: 767px) {
   .nav-bar {
     padding: 10px;
@@ -811,7 +814,6 @@ footer {
 
   .try-arrow {
     height: 100px;
-    top: 35%;
   }
 
   .memberships {
@@ -952,7 +954,7 @@ footer {
 
   .try-arrow {
     height: 100px;
-    top: 38%;
+    
   }
 
   .memberships {
