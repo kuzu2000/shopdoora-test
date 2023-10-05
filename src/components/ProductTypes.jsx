@@ -4,29 +4,22 @@ import React, { useState, useEffect, useRef } from 'react';
 const ProductTypes = React.memo((props) => {
   const windowWidth = useRef(window.innerWidth);
   const [sliderIndex, setSliderIndex] = useState(0);
-  const [slider, setSlider] = useState(0);
 
+  let slider;
+  if (windowWidth.current < 821 && windowWidth.current > 768) {
+    slider = 25;
+  } 
 
-  useEffect(() => {
-    if (windowWidth.current < 821 && windowWidth.current >= 768) {
-      setSlider(25)
-    } 
-  
-    if (windowWidth.current < 1410 && windowWidth.current > 1021) {
-      setSlider(15)
-    } 
-  
-    if (windowWidth.current > 1410) {
-      setSlider(15)
-    }
-     if (windowWidth.current >= 375 && windowWidth.current <= 410) {
-      setSlider(65)
-    } 
-  }, [])
+  if (windowWidth.current < 1410 && windowWidth.current > 1021) {
+    slider = 15;
+  } 
 
-  console.log(slider)
-  console.log(windowWidth.current)
-  
+  if (windowWidth.current > 1410) {
+    slider = 15;
+  }
+   if (windowWidth.current >= 375 && windowWidth.current <= 410) {
+    slider = 65;
+  } 
 
   useEffect(() => {
     let lastIndex =2
