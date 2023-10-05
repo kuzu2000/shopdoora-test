@@ -817,6 +817,7 @@ footer {
 
   .main-membership {
     margin-right: 0;
+    width: 100%;
     margin-bottom: 10px;
   }
 
@@ -826,7 +827,7 @@ footer {
 
   .main-membership-info {
     text-align: center;
-    width: 340px;
+    width: 100%;
     padding: 10px;
   }
 
