@@ -29,7 +29,7 @@ const Membership = () => {
       </div>
       <div className="final-memberships">
         <div className="final-membership">
-        <img src="./shopdoora/transparent-vape.png" alt="Transparent" />
+        <img src="./shopdoora/bigvape.png" alt="Transparent" />
         <div className="final-membership-info">
             <div className="final-membership-name">
                 <div className="final-membership-title">
@@ -45,7 +45,7 @@ const Membership = () => {
         </div>
         </div>
         <div className="final-membership">
-        <img src="./shopdoora/transparent-vape.png" alt="Transparent" />
+        <img src="./shopdoora/bigvape2.png" alt="Transparent" />
         <div className="final-membership-info">
             <div className="final-membership-name">
                 <div className="final-membership-title">

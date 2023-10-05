@@ -1,7 +1,7 @@
 import { bestDeals } from '../data';
-import { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ProductTypes = memo(function ProductTypes(props) {
+const ProductTypes = React.memo((props) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   useEffect(() => {
@@ -69,5 +69,7 @@ const ProductTypes = memo(function ProductTypes(props) {
     </div>
   );
 });
+
+ProductTypes.displayName = 'ProductTypes';
 
 export default ProductTypes;
