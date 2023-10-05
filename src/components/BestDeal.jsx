@@ -4,7 +4,7 @@ const BestDeal = () => {
     <div className="bestDeals">
         <div className="bestDealsHeader">
             <h1>Best Deals</h1>
-            <h3>Just For You</h3>
+            <h3>Just For YouA</h3>
         </div>
         <div className="bestDealsItems">
             {bestDeals.map((item) => (
