@@ -1,11 +1,35 @@
 import { bestDeals } from '../data';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ProductTypes = React.memo((props) => {
+  const windowWidth = useRef(window.innerWidth);
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [slider, setSlider] = useState(0);
+
 
   useEffect(() => {
-    const lastIndex = 2;
+    if (windowWidth.current < 821 && windowWidth.current >= 768) {
+      setSlider(25)
+    } 
+  
+    if (windowWidth.current < 1410 && windowWidth.current > 1021) {
+      setSlider(15)
+    } 
+  
+    if (windowWidth.current > 1410) {
+      setSlider(15)
+    }
+     if (windowWidth.current >= 375 && windowWidth.current <= 410) {
+      setSlider(65)
+    } 
+  }, [])
+
+  console.log(slider)
+  console.log(windowWidth.current)
+  
+
+  useEffect(() => {
+    let lastIndex =2
     if (sliderIndex < 0) {
       setSliderIndex(lastIndex);
     }
@@ -42,7 +66,7 @@ const ProductTypes = React.memo((props) => {
         </div>
         <div
           className="product-types-posts"
-          style={{ transform: `translateX(${sliderIndex * -15}vw)` }}
+          style={{ transform: `translateX(${sliderIndex * -slider}vw)` }}
         >
           {bestDeals.map((item) => (
             <div className="product-types-post" key={item.id}>
