@@ -107,7 +107,6 @@ nav {
   transition: all 0.8s ease-out;
 }
 
-
 .imageContainer {
   height: 80vh;
   width: 100vw;
@@ -119,9 +118,49 @@ nav {
   object-fit: cover;
 }
 
-.infoTitle {
-  font-size: 40px;
+.slider {
+  position: relative;
+  width: 100%;
 }
+
+.infoContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.infoTitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.infoTitle span {
+  font-size: 24px;
+}
+
+.infoTitle h2 {
+  
+}
+
+.infoTitle p {
+  font-size: 18px;
+}
+
+.infoTitle  a {
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1.5rem;
+  padding: 6px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+
 
 .dots {
   margin: 10px;
@@ -173,7 +212,6 @@ nav {
 
 .bestDealsItem {
   text-align: center;
-  border: 1px solid #ccc;
 }
 
 .bestDealsItem .img-inner {
@@ -183,14 +221,31 @@ nav {
 .img-inner .product-image {
   max-width: 100%;
   transition: 0.4s;
+  border-radius: 10px;
 }
 
 .bestDealsItem .img-inner .bestDealsDiscount {
   position: absolute;
   top: 0px;
   left: 50%;
+  padding: 10px;
   color: white;
   background-color: #ec2626;
+}
+
+.bestDealsInfo .bestDealsName,
+.bestDealsCurrentPrice {
+  font-weight: 600;
+}
+
+.bestDealsOriginalPrice {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.bestDealsPoints {
+  color: #ffa900;
+  font-size: 14px;
 }
 
 .view-more-button {
@@ -206,7 +261,7 @@ nav {
   padding: 10px;
   background-color: #bbb;
   border-radius: 1.5rem;
-  transition: .4s;
+  transition: 0.4s;
   font-weight: 600;
 }
 
@@ -275,10 +330,17 @@ footer {
 }
 
 .fab.fa-instagram-square {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -330,6 +392,7 @@ footer {
 
 .tryImageInfo {
   flex: 1;
+  text-align: center;
   color: white;
   display: flex;
   flex-direction: column;
@@ -363,7 +426,8 @@ footer {
   text-align: center;
 }
 
-.cards-header h1, .cards-header h1 span {
+.cards-header h1,
+.cards-header h1 span {
   letter-spacing: 2px;
 }
 
@@ -403,7 +467,8 @@ footer {
   font-weight: 600;
 }
 
-.product-card-image, .product-card-image img {
+.product-card-image,
+.product-card-image img {
   width: 100%;
   height: 180px;
   border-top-right-radius: 10px;
@@ -496,7 +561,7 @@ footer {
   font-weight: 600;
   padding: 5px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .secondary-membership-button:hover {
@@ -518,13 +583,13 @@ footer {
   margin: 5px 0;
   display: flex;
   flex-direction: column;
-
 }
 
 .final-membership img {
   max-width: 100%;
   height: 50%;
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 }
 
 .final-membership-info {
@@ -546,7 +611,7 @@ footer {
   font-weight: 600;
   padding: 5px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .final-membership-button:hover {
@@ -598,7 +663,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin-right: 5px;
-  color:white;
+  color: white;
   width: 210px;
 }
 
@@ -649,17 +714,96 @@ footer {
 }
 
 
+
 @media only screen and (max-width: 767px) {
+  .nav-bar {
+    padding: 10px;
+  }
   .footer-columns {
     flex-direction: column;
     padding: 20px;
   }
+  .bestDealsItems {
+    padding: 20px;
+  }
+  .memberships {
+    padding: 20px;
+  }
+  .cards-container {
+    padding: 20px 10px;
+  }
+  .product-types-container{
+    padding: 20px;
+  }
+
+  .arrow{
+    top: 40%;
+  }
+
+  .try-wrapper {
+    padding: 30px 20px;
+  }
+
+  .imageContainer {
+    height: 60vh;
+  }
+
+  .try-slider {
+
+  }
+
+  .tryImageContainer {
+    flex: 1;
+    width: 68vw;
+    height: 25vh;
+  }
+  
+  .tryImageInfo h1{
+    font-size: 1.3rem;
+  }
+
+  .tryImageInfo p {
+    font-size: 16px;
+  }
+
+  .tryImageInfo a {
+    font-size: 14px;
+  }
 }
+
+
 
 /* Tablets (including iPad) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .footer-columns {
     flex-direction: column;
     padding: 20px 35px;
+  }
+  .nav-bar {
+    padding: 10px;
+  }
+  .bestDealsItems {
+    padding: 3ch;
+  }
+  .memberships {
+    padding: 30px;
+  }
+  .cards-container {
+    padding: 30px 10px;
+  }
+  .product-types-container{
+    padding: 30px;
+  }
+
+  .arrow{
+    top: 40%;
+  }
+
+  .try-wrapper {
+    padding: 30px 20px;
+  }
+
+  .imageContainer {
+    height: 60vh;
   }
 }

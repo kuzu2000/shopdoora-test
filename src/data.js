@@ -20,7 +20,7 @@ export const mainSlider = [
 export const bestDeals = [
     {
         id: 1,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-1.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,
@@ -29,7 +29,7 @@ export const bestDeals = [
     },
     {
         id: 2,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-2.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,
@@ -38,7 +38,7 @@ export const bestDeals = [
     },
     {
         id: 3,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-3.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,
@@ -47,7 +47,7 @@ export const bestDeals = [
     },
     {
         id: 4,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-4.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,
@@ -56,7 +56,7 @@ export const bestDeals = [
     },
     {
         id: 5,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-5.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,
@@ -65,7 +65,7 @@ export const bestDeals = [
     },
     {
         id: 6,
-        image: './shopdoora/fresh-mint-ribena.jpg',
+        image: './shopdoora/vape-1.png',
         name: 'Fresh Mint Ribena',
         originalPrice: 30000,
         currentPrice: 30000,

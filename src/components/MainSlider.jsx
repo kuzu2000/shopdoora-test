@@ -13,17 +13,17 @@ const MainSlider = () => {
     }
   }, [sliderIndex]);
 
-   useEffect(() => {
-    let slider = setInterval(() => {
-      setSliderIndex(sliderIndex + 1);
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [sliderIndex]);
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setSliderIndex(sliderIndex + 1);
+  //   }, 5000);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [sliderIndex]);
 
   const dots = [];
-  for(let i = 0; i < mainSlider.length; i ++) {
+  for (let i = 0; i < mainSlider.length; i++) {
     dots.push(i);
   }
 
@@ -37,42 +37,51 @@ const MainSlider = () => {
 
   const handleClick = (event) => {
     setSliderIndex(Number(event.target.id));
-  }
+  };
   return (
     <div>
-    <div className="container">
-      <div className="arrow left" onClick={() => handleSlide('left')}>
-        <i className="fa fa-arrow-left"></i>
-      </div>
-      <div
-        className="wrapper"
-        style={{ transform: `translateX(${sliderIndex * -100}vw)` }}
-      >
-        {mainSlider.map((item) => (
-          <div className="slider" key={item.id}>
-            <div className="imageContainer">
-              <img src={item.image} alt="" />
+      <div className="container">
+        <div className="arrow left" onClick={() => handleSlide('left')}>
+          <i className="fa fa-arrow-left"></i>
+        </div>
+        <div
+          className="wrapper"
+          style={{ transform: `translateX(${sliderIndex * -100}vw)` }}
+        >
+          {mainSlider.map((item) => (
+            <div className="slider" key={item.id}>
+              <div className="imageContainer">
+                <img src={item.image} alt="" />
+              </div>
+              <div className="infoContainer">
+                <div className="infoTitle">
+                  <span>The Best Look</span>
+                  <h2>Anytime Anywhere</h2>
+                  <p>Starts from 10,000 MMK</p>
+                  <a href="#">
+                    View
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="arrow right" onClick={() => handleSlide('right')}>
+          <i className="fa fa-arrow-right"></i>
+        </div>
       </div>
-      <div className="arrow right" onClick={() => handleSlide('right')}>
-      <i className="fa fa-arrow-right"></i>
+      <div className="dots">
+        <ul>
+          {dots.map((dot) => (
+            <li
+              id={dot}
+              onClick={handleClick}
+              className={Number(sliderIndex) === dot ? 'active dot' : 'dot'}
+              key={dot}
+            ></li>
+          ))}
+        </ul>
       </div>
-    </div>
-    <div className="dots">
-            <ul>
-                {dots.map((dot) => (
-                    <li
-                    id={dot}
-                    onClick={handleClick}
-                    className={Number(sliderIndex) === dot ? 'active dot' : 'dot'}
-                    key={dot}
-                  >
-                  </li>
-                ))}
-            </ul>
-    </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { bestDeals } from '../data';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
-const ProductTypes = (props) => {
+const ProductTypes = memo(function ProductTypes(props) {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   useEffect(() => {
@@ -68,6 +68,6 @@ const ProductTypes = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductTypes;
