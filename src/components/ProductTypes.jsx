@@ -1,30 +1,44 @@
 import { bestDeals } from '../data';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ProductTypes = React.memo((props) => {
-  const windowWidth = useRef(window.innerWidth);
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [slider, setSlider] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  let slider;
-  if (windowWidth.current > 480) {
-    slider = 15;
-  }
-  else if (windowWidth.current >= 410 && windowWidth.current < 460) {
-    slider = 60;
-  } else if (windowWidth.current >= 375 && windowWidth.current <= 410) {
-    slider = 65;
-  }  else if (windowWidth.current > 1410) {
-    slider = 15
-  }
+  useEffect(() => {
+    // Update the width when the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-  console.log(slider)
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when component is unmounted
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array means this effect will only run on mount and unmount
+
+  useEffect(() => {
+    if (windowWidth >= 380 && windowWidth <= 410) {
+      setSlider(60)
+      console.log('true')
+    } 
+
+    if (windowWidth >= 410) {
+      setSlider(55)
+      console.log('55')
+    }
+  }, [windowWidth])
 
   useEffect(() => {
     let lastIndex;
-    if (slider === 65 || slider === 60) {
+    if (windowWidth <= 761) {
       lastIndex = 2;
     } else {
-      lastIndex = bestDeals.length - 1
+      lastIndex = bestDeals.length - 1;
     }
     if (sliderIndex < 0) {
       setSliderIndex(lastIndex);
@@ -32,7 +46,9 @@ const ProductTypes = React.memo((props) => {
     if (sliderIndex > lastIndex) {
       setSliderIndex(0);
     }
-  }, [slider, sliderIndex]);
+  }, [sliderIndex, windowWidth]);
+
+  console.log(windowWidth)
 
   const handleSlide = (d) => {
     if (d === 'left') {
