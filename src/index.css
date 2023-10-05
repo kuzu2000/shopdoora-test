@@ -662,6 +662,7 @@ footer {
 
 .product-type {
   display: flex;
+  flex-wrap: nowrap;
   position: relative;
   background-color: #000;
   overflow-x: hidden;
@@ -675,7 +676,7 @@ footer {
 }
 
 .product-type-image img {
-  object-fit: cover;
+  height: 320px;
 }
 
 .product-type-image-info {
@@ -687,9 +688,9 @@ footer {
 }
 
 .product-types-posts {
-  flex: 3;
+  flex: 4;
   display: flex;
-  width: 100vw;
+  width: 80vw;
   height: 100%;
   transition: all 0.8s ease-out;
 }
@@ -874,6 +875,24 @@ footer {
     font-size: 1.15rem;
     font-weight: 600;
   }
+
+  .product-type {
+    flex-direction: column;
+  }
+
+  .product-types-posts {
+    width: 100vw;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+  }
+
+  .product-types-post {
+    padding: 0 10px;
+  }
+
+  .product-types-post img {
+    max-width: 120px;
+  }
 }
 
 
@@ -1020,12 +1039,16 @@ footer {
     top: 40%;
   }
 
+
   
 
   .main-membership, .other-memberships {
-    height: 480px;
+    height: 580px;
   }
-
+  
+  .main-membership img {
+    width: 100%;
+  }
   .main-membership-info {
     width: 560px;
   }
@@ -1043,11 +1066,11 @@ footer {
   }
 
   .final-membership {
-    height: 48%;
+    height: 50%;
   }
 
   .secondary-membership img {
-    height: 100%;
+    height: 80%;
     width: 100%;
   }
 

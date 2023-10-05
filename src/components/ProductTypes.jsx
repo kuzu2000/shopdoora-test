@@ -42,7 +42,7 @@ const ProductTypes = React.memo((props) => {
         </div>
         <div
           className="product-types-posts"
-          style={{ transform: `translateX(${sliderIndex * -23}vw)` }}
+          style={{ transform: `translateX(${sliderIndex * -15}vw)` }}
         >
           {bestDeals.map((item) => (
             <div className="product-types-post" key={item.id}>
