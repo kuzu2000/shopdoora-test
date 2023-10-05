@@ -32,7 +32,7 @@ const ProductTypes = React.memo((props) => {
     if (sliderIndex > lastIndex) {
       setSliderIndex(0);
     }
-  }, [sliderIndex]);
+  }, [slider, sliderIndex]);
 
   const handleSlide = (d) => {
     if (d === 'left') {
