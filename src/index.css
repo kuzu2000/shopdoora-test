@@ -703,6 +703,7 @@ footer {
   margin-right: 5px;
   color: white;
   width: 210px;
+  z-index: 99;
 }
 
 .product-types-post img {

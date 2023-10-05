@@ -6,23 +6,26 @@ const ProductTypes = React.memo((props) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   let slider;
-  if (windowWidth.current < 821 && windowWidth.current > 768) {
-    slider = 25;
-  } 
-
-  if (windowWidth.current < 1410 && windowWidth.current > 1021) {
-    slider = 15;
-  } 
-
-  if (windowWidth.current > 1410) {
+  if (windowWidth.current > 480) {
     slider = 15;
   }
-   if (windowWidth.current >= 375 && windowWidth.current <= 410) {
+  else if (windowWidth.current >= 410 && windowWidth.current < 460) {
+    slider = 60;
+  } else if (windowWidth.current >= 375 && windowWidth.current <= 410) {
     slider = 65;
-  } 
+  }  else if (windowWidth.current > 1410) {
+    slider = 15
+  }
+
+  console.log(slider)
 
   useEffect(() => {
-    let lastIndex =2
+    let lastIndex;
+    if (slider === 65 || slider === 60) {
+      lastIndex = 2;
+    } else {
+      lastIndex = bestDeals.length - 1
+    }
     if (sliderIndex < 0) {
       setSliderIndex(lastIndex);
     }
