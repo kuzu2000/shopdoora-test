@@ -25,7 +25,7 @@ const TryNewSlider = () => {
     <div className="try-container">
       {sliderIndex > 0 && 
       (
-        <div className="arrow left" onClick={() => handleSlide('left')}>
+        <div className="try-arrow left" onClick={() => handleSlide('left')}>
         <i className="fa fa-arrow-left"></i>
       </div>
       )}
@@ -47,7 +47,7 @@ const TryNewSlider = () => {
           </div>
         ))}
       </div>
-      <div className="arrow right" onClick={() => handleSlide('right')}>
+      <div className="try-arrow right" onClick={() => handleSlide('right')}>
       <i className="fa fa-arrow-right"></i>
       </div>
     </div>

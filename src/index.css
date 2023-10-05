@@ -175,8 +175,8 @@ nav {
 
 .dots ul .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -390,6 +390,35 @@ footer {
   object-position: 100% 40%;
 }
 
+.try-arrow {
+  width: 50px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+}
+
+.try-arrow i {
+  color: #fff;
+}
+
+.try-arrow.left {
+  left: 10px;
+}
+
+.try-arrow.right {
+  right: 10px;
+}
+
 .tryImageInfo {
   flex: 1;
   text-align: center;
@@ -450,6 +479,7 @@ footer {
   align-items: flex-end;
   background-color: rgb(16, 173, 42);
   border-radius: 10px;
+  height: 180px;
 }
 
 .product-card .product-card-info {
@@ -470,7 +500,7 @@ footer {
 .product-card-image,
 .product-card-image img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -479,7 +509,8 @@ footer {
 .memberships {
   padding: 20px 60px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .main-membership {
@@ -523,6 +554,9 @@ footer {
 
 .other-memberships {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 427px;
 }
 
 .secondary-membership {
@@ -535,7 +569,7 @@ footer {
   color: white;
   margin-right: 10px;
   border-radius: 10px;
-  height: 427px;
+  height: 100%;
 }
 
 .secondary-membership img {
@@ -572,10 +606,11 @@ footer {
   flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .final-membership {
-  height: 220px;
+  height: 48%;
   background-color: #313131;
   padding: 20px;
   color: white;
@@ -769,6 +804,60 @@ footer {
   .tryImageInfo a {
     font-size: 14px;
   }
+
+  .try-arrow {
+    height: 100px;
+    top: 35%;
+  }
+
+  .memberships {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-membership {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .main-membership img {
+    max-width: 100%;
+  }
+
+  .other-memberships {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .secondary-membership {
+    margin-right: 0px;
+    
+  }
+
+  .other-memberships img {
+    height: 240px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 80% 0%;
+  }
+
+  .secondary-membership-title, .final-membership-title {
+    font-size: 1.75rem;
+  }
+
+  .final-membership-content, .secondary-membership-content {
+    font-size: 1.2rem;
+  } 
+
+  .product-card {
+    align-items: center;
+  }
+
+  .product-card .product-card-info .product-card-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
 }
 
 
@@ -805,5 +894,28 @@ footer {
 
   .imageContainer {
     height: 60vh;
+  }
+
+  .tryImageContainer {
+    flex: 1;
+    width: 75vw;
+    height: 25vh;
+  }
+  
+  .tryImageInfo h1{
+    font-size: 1.5rem;
+  }
+
+  .tryImageInfo p {
+    font-size: 1.25rem;
+  }
+
+  .tryImageInfo a {
+    font-size: 16px;
+  }
+
+  .try-arrow {
+    height: 100px;
+    top: 38%;
   }
 }
