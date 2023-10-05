@@ -22,7 +22,7 @@ const Footer = () => {
                   className="payment-logo"
                   src="./shopdoora/kbz-pay.png"
                   alt="KBZ Pay"
-                  width="100"
+                  width="70"
                   height="35"
                 />
               </li>

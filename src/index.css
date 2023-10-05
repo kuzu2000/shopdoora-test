@@ -39,11 +39,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
+  color: white;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
 }
 
 .nav-bar i {
   color: white;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.pi {
+  color: transparent;
+  padding: 10px;
+  background-color: white;
 }
 
 .nav-header {
@@ -286,9 +294,8 @@ footer {
 
 .footer-columns {
   padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer-column {
@@ -315,7 +322,7 @@ footer {
 }
 
 .footer-group > ul > li {
-  margin: 10px;
+  margin: 5px;
 }
 
 .footer-group .payment {
@@ -762,9 +769,14 @@ footer {
     padding: 10px;
   }
   .footer-columns {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 20px;
   }
+
+  .footer-group {
+    min-height: 120px;
+  }
+
   .bestDealsItems {
     padding: 20px;
   }
@@ -779,7 +791,7 @@ footer {
   }
 
   .arrow{
-    top: 40%;
+    top: 50%;
   }
 
   .try-wrapper {
@@ -923,11 +935,17 @@ footer {
   }
 
   .arrow{
-    top: 40%;
+    top: 50%;
   }
 
   .try-wrapper {
     padding: 30px 20px;
+  }
+
+  .footer-columns {
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .imageContainer {
