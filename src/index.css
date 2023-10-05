@@ -824,6 +824,20 @@ footer {
     max-width: 100%;
   }
 
+  .main-membership-info {
+    text-align: center;
+    width: 340px;
+    padding: 10px;
+  }
+
+  .main-membership-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-membership-info p {
+    font-size: 1.1rem;
+  }
+
   .other-memberships {
     width: 100%;
     height: auto;
